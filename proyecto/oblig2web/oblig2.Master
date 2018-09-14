@@ -1,0 +1,55 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="oblig2.master.cs" Inherits="oblig2web.oblig2" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <link href="css/estilos.css" rel="stylesheet" />
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <img src="img/header.jpg" width="100%" />
+        
+    <form id="form1" runat="server">
+        <br>
+        <asp:Menu ID="MenuAdmin" runat="server" Orientation="Horizontal" Visible="False" OnMenuItemClick="MenuAdmin_MenuItemClick">
+            <Items>
+                <asp:MenuItem Text="Registrar Admin  |  " Value="Registrar Admin" NavigateUrl="~/AdmRegAdministrador.aspx"></asp:MenuItem>
+                <asp:MenuItem Text="Usuarios  |  " Value="Usuarios" NavigateUrl="~/AdmUsuarios.aspx"></asp:MenuItem>
+                <asp:MenuItem Text="Servicios  |  " Value="Servicios" NavigateUrl="~/AdmOrgServicios.aspx"></asp:MenuItem>
+                <asp:MenuItem Text="Eventos entre 2 fechas  |  " Value="Eventos entre 2 fechas" NavigateUrl="~/AdmEventosEntreFechas.aspx"></asp:MenuItem>
+                <asp:MenuItem Text="Eventos sin Servicio  |  " Value="Eventos sin Servicio  |  " NavigateUrl="~/AdmEventosSinServicio.aspx"></asp:MenuItem>
+                <asp:MenuItem Text="Cambiar montos fijos  |  " Value="Cambiar montos fijos" NavigateUrl="~/AdmMontosFijos.aspx"></asp:MenuItem>
+                <asp:MenuItem Text="Cerrar Session" Value="CerrarSession"></asp:MenuItem>
+            </Items>
+        </asp:Menu>
+        <asp:Menu ID="MenuOrg" runat="server" Orientation="Horizontal" Visible="False" OnMenuItemClick="MenuOrg_MenuItemClick">
+            <Items>
+                <asp:MenuItem Text="Registrar Evento  |  " Value="Registrar Evento" NavigateUrl="~/OrgRegistrarEvento.aspx"></asp:MenuItem>
+                <asp:MenuItem NavigateUrl="~/OrgAgregarServicioAEvento.aspx" Text="Agregar Servicio a Evento  |  " Value="Agregar Servicio a Evento"></asp:MenuItem>
+                <asp:MenuItem Text="Servicios  |  " Value="Servicios" NavigateUrl="~/AdmOrgServicios.aspx"></asp:MenuItem>
+                <asp:MenuItem Text="Mis Eventos  |  " Value="Mis Eventos" NavigateUrl="~/OrgMisEventos.aspx"></asp:MenuItem>
+                <asp:MenuItem Text="Cerrar Session" Value="CerrarSession"></asp:MenuItem>
+            </Items>
+        </asp:Menu>
+        <br>
+        <hr />
+
+    <div CssClass="div100">
+        <br />
+        <asp:ContentPlaceHolder ID="Contenido" runat="server"></asp:ContentPlaceHolder>
+        <br />
+        <br />
+    </div>
+    </form>
+
+    <div>
+        <hr />
+        <p>Santiago C - Programación 2 Agosto 2017 - Analista Programador ORT.</p>
+        <p>Sistema de gestión en  ASP.NET / C# / Visual Studio. </p>
+        <hr />
+    </div>
+</body>
+</html>
